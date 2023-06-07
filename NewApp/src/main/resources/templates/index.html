@@ -1,0 +1,23 @@
+<html xmlns:th="htttp://www.thymeleaf.org">
+    
+    <head th:replace="comunes/template :: head">
+        <title> Portada </title>    
+    </head>
+    <body>
+        <header th:replace="comunes/template :: header">
+            
+        </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-4" th:replace="comunes/template :: sidebar">aside</div>
+            <div class="col-8">
+                <div th:replace="@{${vista}} :: ${fragmento}" >Main</div>
+            </div>
+        </div>
+    </div>
+    <footer th:replace="comunes/template :: footer">
+        <pre>footer</pre>
+    </footer>
+    </body>    
+    
+</html>    
